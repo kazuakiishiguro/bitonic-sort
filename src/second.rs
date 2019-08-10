@@ -53,28 +53,28 @@ mod tests {
     #[test]
     fn sort_u32_ascending() {
         let mut x: Vec<u32> = vec![10, 30, 11, 20, 4, 330, 21, 110];
-        sort(&mut x, &Ascending);
+        assert_eq!(sort(&mut x, &Ascending), Ok(()));
         assert_eq!(x, vec![4, 10, 11, 20, 21, 30, 110, 330]);
     }
 
     #[test]
     fn sort_u32_decending() {
         let mut x: Vec<u32> = vec![10, 30, 11, 20, 4, 330, 21, 110];
-        sort(&mut x, &Descending);
+        assert_eq!(sort(&mut x, &Descending), Ok(()));
         assert_eq!(x, vec![330, 110, 30, 21, 20, 11, 10, 4]);
     }
 
     #[test]
     fn sort_str_ascending() {
         let mut x = vec!["Rust", "is", "fast", "and", "memory-efficient", "with", "no", "GC"];
-        sort(&mut x, &Ascending);
+        assert_eq!(sort(&mut x, &Ascending), Ok(()));
         assert_eq!(x, vec!["GC", "Rust", "and", "fast", "is", "memory-efficient", "no", "with"]);
     }
 
     #[test]
     fn sort_str_decending() {
         let mut x = vec!["Rust", "is", "fast", "and", "memory-efficient", "with", "no", "GC"];
-        sort(&mut x, &Descending);
+        assert_eq!(sort(&mut x, &Descending), Ok(()));
         assert_eq!(x, vec!["with", "no", "memory-efficient", "is", "fast", "and", "Rust", "GC"]);
     }
 }
