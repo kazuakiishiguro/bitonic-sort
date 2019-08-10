@@ -60,7 +60,7 @@ mod tests {
     #[test]
     fn sort_u32_decending() {
         let mut x: Vec<u32> = vec![10, 30, 11, 20, 4, 330, 21, 110];
-        sort(&mut x, &Decending);
+        sort(&mut x, &Descending);
         assert_eq!(x, vec![330, 110, 30, 21, 20, 11, 10, 4]);
     }
 
@@ -74,7 +74,7 @@ mod tests {
     #[test]
     fn sort_str_decending() {
         let mut x = vec!["Rust", "is", "fast", "and", "memory-efficient", "with", "no", "GC"];
-        sort(&mut x, &Decending);
+        sort(&mut x, &Descending);
         assert_eq!(x, vec!["with", "no", "memory-efficient", "is", "fast", "and", "Rust", "GC"]);
     }
 }
