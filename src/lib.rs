@@ -3,5 +3,5 @@ pub mod second;
 
 pub enum SortOrder {
     Ascending,
-    Decending,
+    Descending,
 }
